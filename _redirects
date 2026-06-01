@@ -1,0 +1,25 @@
+[build]
+  command = ""
+  destination = "."
+
+[[redirects]]
+  from = "/crescenthomehealthcare"
+  to = "/crescenthomehealthcare/"
+  status = 301
+
+[[redirects]]
+  from = "/crescenthomehealthcare/privacy-policy"
+  to = "/crescenthomehealthcare/privacy-policy/"
+  status = 301
+
+[[redirects]]
+  from = "/crescenthomehealthcare/terms"
+  to = "/crescenthomehealthcare/terms/"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
