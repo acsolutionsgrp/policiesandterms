@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>A2P 10DLC Registration Guide | One I.T. Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --orange:#F07820;
+  --blue:#2E6DB4;
+  --navy:#0d1a2e;
+  --dark:#111827;
+  --gray:#6B7280;
+  --light:#F9FAFB;
+  --border:#E5E7EB;
+  --green:#16A34A;
+  --red:#DC2626;
+  --yellow:#D97706;
+  --white:#ffffff;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:#F3F4F6;color:var(--dark);line-height:1.7;font-size:15px;}
+
+/* ── PRINT ── */
+@media print{
+  body{background:white;}
+  .sidebar{display:none!important;}
+  .main{margin:0!important;max-width:100%!important;}
+  .step-card,.info-box,.warn-box,.tip-box{break-inside:avoid;}
+  .page-break{page-break-before:always;}
+}
+
+/* ── LAYOUT ── */
+.layout{display:flex;min-height:100vh;}
+
+/* ── SIDEBAR ── */
+.sidebar{
+  width:260px;flex-shrink:0;
+  background:var(--navy);
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+  padding:0 0 40px;
+}
+.sidebar-logo{
+  padding:28px 24px 20px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  margin-bottom:16px;
+}
+.sidebar-logo .brand{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--orange);letter-spacing:0.04em;}
+.sidebar-logo .doc{font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;text-transform:uppercase;letter-spacing:0.08em;}
+.nav-section{padding:0 16px;margin-bottom:8px;}
+.nav-section-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.3);padding:8px 8px 6px;}
+.nav-item{display:block;padding:7px 10px;border-radius:6px;text-decoration:none;font-size:13px;color:rgba(255,255,255,0.6);transition:all 0.15s;margin-bottom:2px;}
+.nav-item:hover{background:rgba(255,255,255,0.06);color:white;}
+.nav-item.active{background:rgba(240,120,32,0.15);color:var(--orange);}
+.nav-item .num{display:inline-block;width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,0.1);font-size:10px;font-weight:700;text-align:center;line-height:20px;margin-right:8px;flex-shrink:0;}
+.nav-item.active .num{background:var(--orange);color:white;}
+
+/* ── MAIN ── */
+.main{flex:1;max-width:900px;padding:48px 56px;margin:0 auto;}
+
+/* ── HEADER ── */
+.doc-header{
+  background:var(--navy);
+  border-radius:16px;
+  padding:48px 56px;
+  margin-bottom:40px;
+  position:relative;
+  overflow:hidden;
+}
+.doc-header::before{
+  content:'';position:absolute;top:-60px;right:-60px;
+  width:300px;height:300px;
+  background:radial-gradient(circle,rgba(240,120,32,0.15) 0%,transparent 70%);
+}
+.doc-header::after{
+  content:'A2P';position:absolute;bottom:-20px;right:40px;
+  font-family:'Syne',sans-serif;font-size:120px;font-weight:800;
+  color:rgba(255,255,255,0.03);line-height:1;
+}
+.doc-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(240,120,32,0.15);border:1px solid rgba(240,120,32,0.3);
+  color:var(--orange);font-size:11px;font-weight:600;letter-spacing:0.1em;
+  text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px;
+}
+.doc-badge::before{content:'';width:6px;height:6px;background:var(--orange);border-radius:50%;}
+.doc-header h1{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:white;line-height:1.1;margin-bottom:16px;}
+.doc-header h1 span{color:var(--orange);}
+.doc-header p{color:rgba(255,255,255,0.55);font-size:15px;max-width:520px;}
+.doc-meta{display:flex;gap:24px;margin-top:28px;flex-wrap:wrap;}
+.doc-meta-item{font-size:12px;color:rgba(255,255,255,0.4);}
+.doc-meta-item strong{color:rgba(255,255,255,0.7);display:block;margin-bottom:2px;}
+
+/* ── COST TABLE ── */
+.cost-table{width:100%;border-collapse:collapse;margin:20px 0;}
+.cost-table th{background:var(--navy);color:white;padding:12px 16px;text-align:left;font-family:'Syne',sans-serif;font-size:12px;letter-spacing:0.04em;}
+.cost-table th:first-child{border-radius:8px 0 0 0;}
+.cost-table th:last-child{border-radius:0 8px 0 0;}
+.cost-table td{padding:12px 16px;border-bottom:1px solid var(--border);font-size:14px;background:white;}
+.cost-table tr:last-child td{border-bottom:none;font-weight:600;}
+.cost-table tr:last-child td:first-child{border-radius:0 0 0 8px;}
+.cost-table tr:last-child td:last-child{border-radius:0 0 8px 0;}
+.cost-table .savings{color:var(--green);font-weight:700;}
+.cost-table .expensive{color:var(--red);}
+.cost-table .highlight{background:#FFF8F3;}
+
+/* ── SECTION ── */
+.section{margin-bottom:56px;}
+.section-header{display:flex;align-items:center;gap:16px;margin-bottom:28px;}
+.section-num{
+  width:48px;height:48px;flex-shrink:0;
+  background:var(--orange);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800;color:white;
+}
+.section-num.blue{background:var(--blue);}
+.section-num.green{background:var(--green);}
+.section-title{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;color:var(--dark);}
+.section-subtitle{font-size:13px;color:var(--gray);margin-top:2px;}
+
+/* ── STEP CARDS ── */
+.steps{display:flex;flex-direction:column;gap:16px;}
+.step-card{background:white;border-radius:12px;padding:24px 28px;border:1px solid var(--border);position:relative;}
+.step-card::before{
+  content:attr(data-step);
+  position:absolute;top:24px;left:28px;
+  font-family:'Syne',sans-serif;font-size:11px;font-weight:700;
+  color:var(--orange);letter-spacing:0.1em;text-transform:uppercase;
+}
+.step-card h4{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--dark);margin:28px 0 10px;}
+.step-card p{font-size:14px;color:#4B5563;line-height:1.65;}
+.step-card ul{padding-left:20px;margin-top:8px;}
+.step-card ul li{font-size:14px;color:#4B5563;margin-bottom:6px;line-height:1.6;}
+.step-card .nav-path{
+  display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;
+  background:#F3F4F6;border-radius:8px;padding:10px 14px;
+  margin-top:12px;font-size:13px;color:var(--dark);
+}
+.step-card .nav-path .arrow{color:var(--gray);}
+.step-card .nav-path .node{font-weight:600;color:var(--blue);}
+
+/* ── INFO BOXES ── */
+.info-box,.warn-box,.tip-box,.success-box{
+  border-radius:10px;padding:16px 20px;margin:16px 0;font-size:14px;line-height:1.65;
+  display:flex;gap:14px;
+}
+.info-box{background:#EFF6FF;border-left:4px solid var(--blue);color:#1E3A5F;}
+.warn-box{background:#FEF3C7;border-left:4px solid var(--yellow);color:#78350F;}
+.tip-box{background:#FFF8F3;border-left:4px solid var(--orange);color:#7C2D12;}
+.success-box{background:#F0FDF4;border-left:4px solid var(--green);color:#14532D;}
+.box-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
+.box-content strong{display:block;margin-bottom:4px;font-weight:600;}
+
+/* ── FIELD TABLE ── */
+.field-table{width:100%;border-collapse:collapse;margin:16px 0;border-radius:10px;overflow:hidden;border:1px solid var(--border);}
+.field-table th{background:var(--navy);color:white;padding:10px 16px;text-align:left;font-size:12px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;}
+.field-table td{padding:10px 16px;border-bottom:1px solid var(--border);font-size:14px;vertical-align:top;}
+.field-table tr:last-child td{border-bottom:none;}
+.field-table tr:nth-child(even) td{background:#F9FAFB;}
+.field-table td:first-child{font-weight:600;color:var(--dark);white-space:nowrap;width:220px;}
+.field-table td:last-child{color:#4B5563;}
+.field-table .example{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue);background:#EFF6FF;padding:2px 6px;border-radius:4px;}
+
+/* ── CODE/SAMPLE ── */
+.sample-msg{
+  background:var(--navy);border-radius:10px;padding:18px 20px;
+  font-family:'JetBrains Mono',monospace;font-size:12.5px;
+  color:rgba(255,255,255,0.85);line-height:1.7;margin:10px 0;
+}
+.sample-msg .label{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;display:block;}
+.sample-msg .variable{color:#7dd3fc;}
+.sample-msg .brand{color:var(--orange);}
+.sample-msg .compliance{color:#86efac;}
+
+/* ── CHECKLIST ── */
+.checklist{list-style:none;padding:0;margin:12px 0;}
+.checklist li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #F3F4F6;font-size:14px;color:#374151;}
+.checklist li:last-child{border-bottom:none;}
+.checklist li::before{content:'☐';font-size:16px;flex-shrink:0;margin-top:0px;color:var(--gray);}
+.checklist li strong{color:var(--dark);}
+
+/* ── PHASE HEADER ── */
+.phase{
+  background:var(--navy);border-radius:10px;padding:16px 20px;
+  margin-bottom:20px;display:flex;align-items:center;gap:14px;
+}
+.phase-badge{
+  background:var(--orange);border-radius:6px;padding:4px 12px;
+  font-family:'Syne',sans-serif;font-size:11px;font-weight:700;
+  color:white;letter-spacing:0.06em;white-space:nowrap;
+}
+.phase-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:white;}
+.phase-sub{font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;}
+
+/* ── REJECTION TABLE ── */
+.reject-table{width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden;border:1px solid var(--border);}
+.reject-table th{background:#7F1D1D;color:white;padding:10px 16px;text-align:left;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;}
+.reject-table td{padding:12px 16px;border-bottom:1px solid var(--border);font-size:14px;vertical-align:top;}
+.reject-table tr:last-child td{border-bottom:none;}
+.reject-table tr:nth-child(even) td{background:#FFF5F5;}
+.reject-table td:first-child{font-weight:600;color:#991B1B;width:260px;}
+
+/* ── CLIENT TABLE ── */
+.client-table{width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden;border:1px solid var(--border);}
+.client-table th{background:var(--navy);color:white;padding:10px 16px;text-align:left;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;}
+.client-table td{padding:10px 16px;border-bottom:1px solid var(--border);font-size:13px;font-family:'JetBrains Mono',monospace;}
+.client-table tr:last-child td{border-bottom:none;}
+.client-table tr:nth-child(even) td{background:#F9FAFB;}
+.client-table td:first-child{font-family:'DM Sans',sans-serif;font-weight:600;color:var(--dark);}
+
+/* ── DIVIDER ── */
+.divider{border:none;border-top:2px solid var(--border);margin:40px 0;}
+
+/* ── FOOTER ── */
+.doc-footer{background:var(--navy);border-radius:12px;padding:28px 32px;text-align:center;color:rgba(255,255,255,0.4);font-size:12px;margin-top:48px;}
+.doc-footer strong{color:var(--orange);}
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <div class="brand">ONE I.T. PRO</div>
+    <div class="doc">A2P Registration Guide</div>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-label">Overview</div>
+    <a href="#overview" class="nav-item"><span class="num">i</span>Introduction</a>
+    <a href="#costs" class="nav-item"><span class="num">$</span>Cost Comparison</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-label">Part 1 — Preparation</div>
+    <a href="#prereqs" class="nav-item"><span class="num">1</span>Gather Client Info</a>
+    <a href="#policy-pages" class="nav-item"><span class="num">2</span>Create Policy Pages</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-label">Part 2 — A2P Brand</div>
+    <a href="#brand-login" class="nav-item"><span class="num">3</span>Log In to Twilio</a>
+    <a href="#brand-navigate" class="nav-item"><span class="num">4</span>Navigate to Brands</a>
+    <a href="#brand-type" class="nav-item"><span class="num">5</span>Select Brand Type</a>
+    <a href="#brand-fields" class="nav-item"><span class="num">6</span>Fill Brand Details</a>
+    <a href="#brand-submit" class="nav-item"><span class="num">7</span>Submit & Wait</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-label">Part 3 — A2P Campaign</div>
+    <a href="#campaign-start" class="nav-item"><span class="num">8</span>Start Campaign</a>
+    <a href="#campaign-desc" class="nav-item"><span class="num">9</span>Description & Samples</a>
+    <a href="#campaign-optin" class="nav-item"><span class="num">10</span>Opt-In Methods</a>
+    <a href="#campaign-consent" class="nav-item"><span class="num">11</span>Consent Description</a>
+    <a href="#campaign-urls" class="nav-item"><span class="num">12</span>Policy URLs</a>
+    <a href="#campaign-keywords" class="nav-item"><span class="num">13</span>Keywords & Submit</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-label">Reference</div>
+    <a href="#policy-infra" class="nav-item"><span class="num">⚙</span>GitHub + Cloudflare</a>
+    <a href="#rejections" class="nav-item"><span class="num">!</span>Common Rejections</a>
+    <a href="#checklist" class="nav-item"><span class="num">✓</span>Final Checklist</a>
+    <a href="#clients" class="nav-item"><span class="num">@</span>Active Clients</a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+  <!-- HEADER -->
+  <div class="doc-header">
+    <div class="doc-badge">Internal Documentation</div>
+    <h1>A2P 10DLC<br/><span>Registration Guide</span></h1>
+    <p>Step-by-step process for registering A2P Brands and Campaigns on behalf of clients in Twilio. Uses North Park Medical Group as the working example throughout.</p>
+    <div class="doc-meta">
+      <div class="doc-meta-item"><strong>Version</strong>1.0 — June 2026</div>
+      <div class="doc-meta-item"><strong>Owner</strong>Antonio Contreras, CTO</div>
+      <div class="doc-meta-item"><strong>Audience</strong>One I.T. Pro Technical Team</div>
+      <div class="doc-meta-item"><strong>Platform</strong>Twilio Console</div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="section" id="overview">
+    <div class="section-header">
+      <div class="section-num">i</div>
+      <div>
+        <div class="section-title">Overview</div>
+        <div class="section-subtitle">What is A2P 10DLC and why does it matter</div>
+      </div>
+    </div>
+
+    <p>A2P (Application-to-Person) 10DLC registration is required by US carriers for any business sending SMS messages via a 10-digit long code number. Without registration, messages will be filtered or blocked by carriers.</p>
+
+    <div class="info-box" style="margin-top:16px;">
+      <span class="box-icon">⚡</span>
+      <div class="box-content">
+        <strong>Critical Order of Operations</strong>
+        Always create the <strong>A2P Brand FIRST</strong>. A Campaign cannot be submitted without an approved Brand. Brand approval must be confirmed before starting the Campaign form.
+      </div>
+    </div>
+
+    <div class="warn-box">
+      <span class="box-icon">⚠️</span>
+      <div class="box-content">
+        <strong>Subaccounts need Brand Sharing</strong>
+        For client subaccounts, the main AC Solutions Group account must first share its Brand. Go to main account → Regulatory Compliance → Brands → Share Brand → Enable on all subaccounts → Submit support ticket. Wait for Twilio confirmation before proceeding.
+      </div>
+    </div>
+  </div>
+
+  <!-- COSTS -->
+  <div class="section" id="costs">
+    <div class="section-header">
+      <div class="section-num">$</div>
+      <div>
+        <div class="section-title">Cost Comparison</div>
+        <div class="section-subtitle">Why Low Volume Mixed saves clients money</div>
+      </div>
+    </div>
+
+    <table class="cost-table">
+      <tr>
+        <th>Fee</th>
+        <th>Standard Use Case</th>
+        <th>✅ Low Volume Mixed (USE THIS)</th>
+      </tr>
+      <tr>
+        <td>Brand fee/month</td>
+        <td>$4.00</td>
+        <td class="highlight">$4.00</td>
+      </tr>
+      <tr>
+        <td>Campaign fee/month</td>
+        <td class="expensive">$10.00</td>
+        <td class="highlight savings">$1.50</td>
+      </tr>
+      <tr>
+        <td>One-time vetting fee</td>
+        <td>$15.00</td>
+        <td class="highlight">$15.00</td>
+      </tr>
+      <tr>
+        <td><strong>Total monthly</strong></td>
+        <td class="expensive"><strong>~$14.00/mo</strong></td>
+        <td class="highlight savings"><strong>~$5.50/mo — saves $8.50/mo per client</strong></td>
+      </tr>
+    </table>
+
+    <div class="tip-box">
+      <span class="box-icon">💡</span>
+      <div class="box-content">
+        <strong>Low Volume Mixed is only available to Low Volume Standard brands.</strong>
+        You must select "Low Volume Standard" when creating the Brand to unlock this campaign type. This is the single most important cost decision in the entire process.
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- PART 1 -->
+  <div class="section" id="prereqs">
+    <div class="phase">
+      <div class="phase-badge">PART 1</div>
+      <div>
+        <div class="phase-title">Preparation — Before You Touch Twilio</div>
+        <div class="phase-sub">Collect everything needed so the form can be completed without interruption</div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step-card" data-step="Step 1">
+        <h4>Gather Required Client Information</h4>
+        <p>Have all of the following before logging into Twilio. Missing info causes incomplete submissions and delays.</p>
+        <table class="field-table" style="margin-top:16px;">
+          <tr><th>Field</th><th>North Park Medical Group Example</th></tr>
+          <tr><td>Legal Business Name</td><td><span class="example">North Park Medical Group</span></td></tr>
+          <tr><td>Business Website</td><td><span class="example">https://northparkmed.com</span></td></tr>
+          <tr><td>Business Phone</td><td><span class="example">+1 708-345-8255</span></td></tr>
+          <tr><td>Business Address</td><td><span class="example">2225 W North Ave, Ste I, Melrose Park, IL 60160</span></td></tr>
+          <tr><td>EIN / Federal Tax ID</td><td><span class="example">Client's EIN — required, no exceptions</span></td></tr>
+          <tr><td>Business Type</td><td><span class="example">Private Corporation</span></td></tr>
+          <tr><td>SMS Use Cases</td><td><span class="example">Appointment reminders, lab results, care updates</span></td></tr>
+          <tr><td>Opt-In Methods</td><td><span class="example">Verbal (intake) + Via Text (keyword APPT)</span></td></tr>
+          <tr><td>Twilio Subaccount</td><td><span class="example">NorthPark Medical Group subaccount</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="policy-pages">
+    <div class="steps">
+      <div class="step-card" data-step="Step 2">
+        <h4>Create and Deploy Policy Pages</h4>
+        <p>Privacy Policy and Terms pages must be live at a public URL before submitting the campaign. Carriers verify these URLs during review.</p>
+        <div class="info-box" style="margin-top:14px;">
+          <span class="box-icon">📁</span>
+          <div class="box-content">
+            <strong>Standard file locations on your Mac:</strong>
+            <code style="display:block;margin-top:6px;font-family:monospace;font-size:12px;">~/Documents/policiesandterms/[clientslug]/privacy-policy/index.html<br/>~/Documents/policiesandterms/[clientslug]/terms/index.html</code>
+          </div>
+        </div>
+        <p style="margin-top:12px;"><strong>Terminal commands to create and deploy:</strong></p>
+        <div class="sample-msg" style="margin-top:8px;">
+          <span class="label">Terminal — run in order</span>
+mkdir -p ~/Documents/policiesandterms/northparkmed/{privacy-policy,terms}
+# Copy HTML template files into both folders (index.html in each)
+cd ~/Documents/policiesandterms
+git add .
+git commit -m "Add [Client Name] policy pages"
+git push
+# Wait 60 seconds, then test both URLs in browser
+        </div>
+        <p style="margin-top:12px;"><strong>Verify both URLs load before proceeding:</strong></p>
+        <div class="sample-msg" style="margin-top:8px;">
+          <span class="label">URLs to test</span>
+https://policiesandterms.com/northparkmed/privacy-policy
+https://policiesandterms.com/northparkmed/terms
+        </div>
+        <div class="warn-box" style="margin-top:12px;">
+          <span class="box-icon">⚠️</span>
+          <div class="box-content">A broken or non-loading policy URL is an <strong>instant rejection</strong>. Always test both in a browser before submitting the campaign.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- PART 2 — BRAND -->
+  <div class="section" id="brand-login">
+    <div class="phase">
+      <div class="phase-badge">PART 2</div>
+      <div>
+        <div class="phase-title">Create the A2P Brand</div>
+        <div class="phase-sub">Must be completed and approved before creating the Campaign</div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step-card" data-step="Step 3">
+        <h4>Log Into the Correct Twilio Subaccount</h4>
+        <p>Each client has their own subaccount. Never create the Brand under the main AC Solutions Group account unless it's for AC Solutions Group itself.</p>
+        <ul>
+          <li>Go to <strong>console.twilio.com</strong></li>
+          <li>Click the account dropdown at the top of the page</li>
+          <li>Select the <strong>client's subaccount</strong> (e.g. NorthPark Medical Group)</li>
+          <li>Verify the account name shows in the top bar before proceeding</li>
+        </ul>
+      </div>
+
+      <div class="step-card" id="brand-navigate" data-step="Step 4">
+        <h4>Navigate to Brand Registration</h4>
+        <div class="nav-path">
+          <span class="node">Messaging</span>
+          <span class="arrow">→</span>
+          <span class="node">Regulatory Compliance</span>
+          <span class="arrow">→</span>
+          <span class="node">A2P 10DLC Overview</span>
+          <span class="arrow">→</span>
+          <span class="node">Brands</span>
+          <span class="arrow">→</span>
+          <span class="node">Create A2P Brand</span>
+        </div>
+        <p style="margin-top:12px;">Alternatively, from Trust Hub: <strong>Registrations → A2P Brands → Create A2P Brand</strong></p>
+      </div>
+
+      <div class="step-card" id="brand-type" data-step="Step 5 — CRITICAL">
+        <h4>Select Brand Type: Low Volume Standard</h4>
+        <div class="success-box" style="margin-top:0;">
+          <span class="box-icon">✅</span>
+          <div class="box-content">
+            <strong>Always select: Low Volume Standard</strong>
+            This unlocks the "Low Volume Mixed" campaign use case at $1.50/month. If you accidentally select "Standard", the campaign will cost $10/month. This cannot easily be changed after submission.
+          </div>
+        </div>
+        <p>Low Volume Standard is appropriate for the vast majority of clients. Only select "Standard" if the client sends extremely high message volumes (tens of thousands per day).</p>
+      </div>
+
+      <div class="step-card" id="brand-fields" data-step="Step 6">
+        <h4>Fill in Brand Details</h4>
+        <table class="field-table" style="margin-top:12px;">
+          <tr><th>Field</th><th>What to Enter</th></tr>
+          <tr><td>Company Name</td><td>Exact legal business name — must match EIN registration</td></tr>
+          <tr><td>EIN</td><td>Client's federal EIN — <strong>required, no exceptions</strong></td></tr>
+          <tr><td>Business Type</td><td>Private Corporation (most common for small businesses)</td></tr>
+          <tr><td>Industry</td><td>Select closest match (e.g. Healthcare for medical practices)</td></tr>
+          <tr><td>Website</td><td>Full URL: <span class="example">https://northparkmed.com</span></td></tr>
+          <tr><td>Business Address</td><td>Client's registered business address</td></tr>
+          <tr><td>Contact Email</td><td>Client's business email or <span class="example">twiliostatus@acsolutionsgrp.com</span></td></tr>
+          <tr><td>Contact Phone</td><td>Client's main business phone</td></tr>
+        </table>
+      </div>
+
+      <div class="step-card" id="brand-submit" data-step="Step 7">
+        <h4>Submit and Wait for Approval</h4>
+        <ul>
+          <li>Review all fields — double-check EIN and website URL</li>
+          <li>Click <strong>Submit</strong></li>
+          <li>Status will show <strong>Pending</strong> — approval is typically minutes to 24 hours</li>
+          <li>You will receive an email when approved</li>
+          <li><strong>Do NOT create the Campaign until Brand status shows Approved</strong></li>
+        </ul>
+        <div class="success-box" style="margin-top:12px;">
+          <span class="box-icon">✅</span>
+          <div class="box-content">North Park Medical Group's Brand was approved within minutes on June 3, 2026. Low Volume Standard brands typically approve quickly when EIN and website match.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- PART 3 — CAMPAIGN -->
+  <div class="section" id="campaign-start">
+    <div class="phase">
+      <div class="phase-badge">PART 3</div>
+      <div>
+        <div class="phase-title">Create the A2P Campaign</div>
+        <div class="phase-sub">Only after the Brand is Approved</div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step-card" data-step="Step 8">
+        <h4>Start the Campaign and Select Use Case</h4>
+        <div class="nav-path" style="margin-bottom:14px;">
+          <span class="node">Messaging</span>
+          <span class="arrow">→</span>
+          <span class="node">Regulatory Compliance</span>
+          <span class="arrow">→</span>
+          <span class="node">Campaigns</span>
+          <span class="arrow">→</span>
+          <span class="node">Register new Campaign</span>
+        </div>
+        <table class="field-table">
+          <tr><th>Field</th><th>What to Select</th></tr>
+          <tr><td>A2P Brand</td><td>Select the approved client Brand from the dropdown</td></tr>
+          <tr><td>Messaging Service</td><td>Select existing if already created, otherwise "Create new"</td></tr>
+          <tr><td>Campaign Name</td><td><span class="example">NorthPark Medical Group Customer Care</span></td></tr>
+          <tr><td>Use Case</td><td><strong>Low Volume Mixed</strong> — $1.50/mo, covers all use cases</td></tr>
+        </table>
+        <div class="tip-box" style="margin-top:12px;">
+          <span class="box-icon">💡</span>
+          <div class="box-content">For North Park Medical Group, messaging service <span style="font-family:monospace;font-size:12px;">MG83b4c7f332ca6d06c4941f9cc1470fb4</span> was already created. Always check before creating a new one.</div>
+        </div>
+      </div>
+
+      <div class="step-card" id="campaign-desc" data-step="Step 9">
+        <h4>Campaign Description and Sample Messages</h4>
+        <p><strong>Campaign Description</strong> — describe what the client will send, who receives it, and include opt-out language:</p>
+        <div class="sample-msg">
+          <span class="label">Campaign Description — North Park Medical Group</span>
+This campaign sends appointment reminders, physical therapy scheduling updates, lab result notifications, referral coordination messages, and responses to patient inquiries from North Park Medical Group to patients who have provided consent during registration. Patients may opt out at any time by replying STOP. For help reply HELP. Message and data rates may apply. Message frequency varies based on appointment schedule.
+        </div>
+
+        <p style="margin-top:20px;"><strong>Sample Messages</strong> — provide 3–5. Every message MUST include STOP, HELP, and rates disclaimer:</p>
+
+        <div class="warn-box">
+          <span class="box-icon">🚨</span>
+          <div class="box-content"><strong>This is the #1 rejection cause.</strong> Every single sample message must end with STOP, HELP, and "Msg &amp; data rates may apply." Missing any one of these = rejection.</div>
+        </div>
+
+        <div class="sample-msg" style="margin-top:12px;">
+          <span class="label">Sample Message #1 — Appointment Reminder</span>
+<span class="brand">North Park Medical Group:</span> Hi <span class="variable">[Patient Name]</span>, your appointment is confirmed for <span class="variable">[Date]</span> at <span class="variable">[Time]</span>. Call +1 708-345-8255 or visit northparkmed.com to reschedule. <span class="compliance">Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</span>
+        </div>
+
+        <div class="sample-msg">
+          <span class="label">Sample Message #2 — Physical Therapy</span>
+<span class="brand">North Park Medical Group:</span> Your physical therapy session is scheduled for <span class="variable">[Date]</span> at <span class="variable">[Time]</span>. Please wear comfortable clothing. Questions? Call +1 708-345-8255. <span class="compliance">Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</span>
+        </div>
+
+        <div class="sample-msg">
+          <span class="label">Sample Message #3 — Lab Results</span>
+<span class="brand">North Park Medical Group:</span> Your lab results are ready. Log in at northparkmed.com or call +1 708-345-8255 to discuss with your provider. <span class="compliance">Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</span>
+        </div>
+
+        <div class="sample-msg">
+          <span class="label">Sample Message #4 — Follow Up</span>
+<span class="brand">North Park Medical Group:</span> Your provider would like to schedule a follow-up visit. Call +1 708-345-8255 or visit northparkmed.com to book. <span class="compliance">Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</span>
+        </div>
+
+        <div class="sample-msg">
+          <span class="label">Sample Message #5 — Appointment Request</span>
+<span class="brand">North Park Medical Group:</span> Your appointment request has been received. Our team will confirm shortly. Questions? Call +1 708-345-8255 or visit northparkmed.com. <span class="compliance">Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</span>
+        </div>
+
+        <p style="margin-top:12px;font-size:13px;color:var(--gray);">Legend: <span style="color:var(--orange);font-family:monospace;">Orange</span> = brand name &nbsp;|&nbsp; <span style="color:#7dd3fc;font-family:monospace;">Blue</span> = variable content &nbsp;|&nbsp; <span style="color:#86efac;font-family:monospace;">Green</span> = required compliance text</p>
+      </div>
+
+      <div class="step-card" id="campaign-optin" data-step="Step 10">
+        <h4>Select Opt-In Methods</h4>
+        <p>Only check methods the client actually uses AND that you can document. Do not check all boxes — reviewers verify these.</p>
+        <table class="field-table" style="margin-top:12px;">
+          <tr><th>Method</th><th>When to Check</th><th>Documentation Required</th></tr>
+          <tr><td>✅ Verbal</td><td>Staff reads a consent script during intake/registration</td><td>Include exact script text in consent field</td></tr>
+          <tr><td>✅ Via Text</td><td>Customer texts a keyword to opt in</td><td>Hosted collateral screenshot URL in consent field</td></tr>
+          <tr><td>✅ Paper Form</td><td>Customer signs a physical intake form</td><td>Screenshot of form hosted at public URL</td></tr>
+          <tr><td>❌ Web Form</td><td>Customer submits online form with SMS checkbox</td><td>Screenshot of form + URL</td></tr>
+          <tr><td>❌ Mobile QR</td><td>Customer scans QR code to opt in</td><td>QR code screenshot hosted at URL</td></tr>
+        </table>
+        <div class="tip-box" style="margin-top:12px;">
+          <span class="box-icon">💡</span>
+          <div class="box-content"><strong>For North Park Medical Group:</strong> Check <strong>Verbal</strong> + <strong>Via Text</strong>. Verbal = staff reads script during patient registration. Via Text = patients text APPT to 708-345-8255.</div>
+        </div>
+      </div>
+
+      <div class="step-card" id="campaign-consent" data-step="Step 11 — CRITICAL">
+        <h4>Consent Description (Message Flow)</h4>
+        <p>This is the <strong>most scrutinized field</strong> and the #1 reason campaigns are rejected. Be explicit and specific. Include the exact verbal script if using Verbal opt-in.</p>
+
+        <p style="margin-top:14px;"><strong>Must include all of the following:</strong></p>
+        <ul>
+          <li>How each checked opt-in method works (step by step)</li>
+          <li>The <strong>exact words</strong> staff reads if using Verbal</li>
+          <li>URL of hosted collateral if using Via Text</li>
+          <li>STOP opt-out instructions</li>
+          <li>HELP instructions</li>
+          <li>"Msg &amp; data rates may apply"</li>
+          <li>"Message frequency varies"</li>
+          <li>Privacy Policy URL</li>
+          <li>Terms URL</li>
+        </ul>
+
+        <div class="sample-msg" style="margin-top:16px;">
+          <span class="label">Consent Description — North Park Medical Group</span>
+Patients consent verbally during registration when staff reads: "We can send you appointment reminders and care updates via text. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Terms at policiesandterms.com/northparkmed/terms. Do you consent?" Patient replies yes and enrollment is confirmed. Patients may also text APPT to +1 708-345-8255. They receive a welcome message with full disclosures and must reply Y to confirm enrollment. Collateral: https://policiesandterms.com/northparkmed/sms-optin Terms: https://policiesandterms.com/northparkmed/terms Privacy Policy: https://policiesandterms.com/northparkmed/privacy-policy
+        </div>
+      </div>
+
+      <div class="step-card" id="campaign-urls" data-step="Step 12">
+        <h4>Message Contents and Policy URLs</h4>
+        <table class="field-table" style="margin-top:8px;">
+          <tr><th>Field</th><th>What to Enter</th></tr>
+          <tr><td>☑ Embedded Links</td><td>Always check — messages include website URLs</td></tr>
+          <tr><td>☑ Phone Numbers</td><td>Always check — messages include phone numbers</td></tr>
+          <tr><td>☐ Direct Lending</td><td>Leave unchecked (not applicable)</td></tr>
+          <tr><td>☐ Age-gated Content</td><td>Leave unchecked (not applicable)</td></tr>
+          <tr><td>Privacy Policy URL</td><td><span class="example">https://policiesandterms.com/northparkmed/privacy-policy</span></td></tr>
+          <tr><td>Terms URL</td><td><span class="example">https://policiesandterms.com/northparkmed/terms</span></td></tr>
+          <tr><td>Sample Embedded Link</td><td><span class="example">https://northparkmed.com</span></td></tr>
+        </table>
+      </div>
+
+      <div class="step-card" id="campaign-keywords" data-step="Step 13">
+        <h4>Keywords, Messages, and Submit</h4>
+        <table class="field-table" style="margin-top:8px;">
+          <tr><th>Field</th><th>North Park Medical Group</th></tr>
+          <tr><td>Opt-in Keywords</td><td><span class="example">APPT, START, YES, UNSTOP</span> (if Via Text) — leave blank if Verbal only</td></tr>
+          <tr><td>Opt-in Message</td><td>Max 320 chars: <span class="example">North Park Medical Group: You'll receive appointment reminders &amp; care updates. Msg frequency varies. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out. Terms: policiesandterms.com/northparkmed/terms Reply Y to confirm.</span></td></tr>
+          <tr><td>Opt-out Keywords</td><td><strong>Leave blank</strong> — Twilio uses carrier-compliant defaults</td></tr>
+          <tr><td>Opt-out Message</td><td><strong>Leave blank</strong> — Twilio handles automatically</td></tr>
+          <tr><td>Help Keywords</td><td><strong>Leave blank</strong> — Twilio handles automatically</td></tr>
+          <tr><td>Help Message</td><td><strong>Leave blank</strong> — Twilio handles automatically</td></tr>
+        </table>
+        <div class="info-box" style="margin-top:12px;">
+          <span class="box-icon">ℹ️</span>
+          <div class="box-content">Click <strong>Submit / Create</strong> and confirm the $15 vetting fee. Campaign will show "In Review" or "In Progress." Approval takes 1–5 business days. You'll receive an email notification.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+
+  <!-- POLICY INFRASTRUCTURE -->
+  <div class="section" id="policy-infra">
+    <div class="phase">
+      <div class="phase-badge">INFRASTRUCTURE</div>
+      <div>
+        <div class="phase-title">Policy Page System — GitHub + Cloudflare</div>
+        <div class="phase-sub">How to generate, push, and host Privacy Policy, Terms, and SMS Opt-In pages for each client</div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <span class="box-icon">🏗️</span>
+      <div class="box-content">
+        <strong>Architecture Overview</strong>
+        All client policy pages live in one GitHub repository (<code style="font-family:monospace;font-size:12px;">acsolutionsgrp/policiesandterms</code>) that auto-deploys to Cloudflare Pages on every push. Each client gets a subfolder. No DNS changes needed per client — the wildcard subdomain handles everything.
+      </div>
+    </div>
+
+    <div class="steps">
+
+      <div class="step-card" data-step="Infrastructure Overview">
+        <h4>How the System Works</h4>
+        <table class="field-table" style="margin-top:8px;">
+          <tr><th>Component</th><th>Details</th></tr>
+          <tr><td>GitHub Repo</td><td><span class="example">github.com/acsolutionsgrp/policiesandterms</span></td></tr>
+          <tr><td>Local path on Mac</td><td><span class="example">~/Documents/policiesandterms/</span></td></tr>
+          <tr><td>Hosting</td><td>Cloudflare Pages — auto-deploys on every git push (~60 sec)</td></tr>
+          <tr><td>Root domain</td><td><span class="example">policiesandterms.com</span> — live landing page</td></tr>
+          <tr><td>Client pages</td><td><span class="example">policiesandterms.com/[clientslug]/privacy-policy</span></td></tr>
+          <tr><td>Client subdomains</td><td><span class="example">[clientslug].policiesandterms.com</span> (optional, for Twilio subaccount custom domains)</td></tr>
+        </table>
+        <div class="sample-msg" style="margin-top:14px;">
+          <span class="label">Folder structure in the repo</span>
+~/Documents/policiesandterms/
+├── index.html                        ← Root landing page
+├── _redirects                        ← Cloudflare redirect rules
+├── README.md
+├── crescenthomehealthcare/
+│   ├── privacy-policy/index.html
+│   ├── terms/index.html
+│   └── sms-optin/index.html         ← Via Text collateral page
+├── northparkmed/
+│   ├── privacy-policy/index.html
+│   ├── terms/index.html
+│   └── sms-optin/index.html
+└── [newclientslug]/
+    ├── privacy-policy/index.html
+    ├── terms/index.html
+    └── sms-optin/index.html          ← Only needed if Via Text opt-in
+        </div>
+      </div>
+
+      <div class="step-card" data-step="Step A — Create Client Folders">
+        <h4>Step 1 — Create the Client Folder Structure</h4>
+        <p>Run this in Terminal. Replace <code style="font-family:monospace;background:#F3F4F6;padding:2px 6px;border-radius:4px;">[clientslug]</code> with a short, lowercase, no-spaces version of the client name.</p>
+        <div class="sample-msg" style="margin-top:12px;">
+          <span class="label">Terminal — Create folders</span>
+cd ~/Documents/policiesandterms
+mkdir -p [clientslug]/privacy-policy
+mkdir -p [clientslug]/terms
+mkdir -p [clientslug]/sms-optin     # Only if using Via Text opt-in
+        </div>
+        <table class="field-table" style="margin-top:14px;">
+          <tr><th>Client</th><th>Slug to Use</th></tr>
+          <tr><td>North Park Medical Group</td><td><span class="example">northparkmed</span></td></tr>
+          <tr><td>Crescent Home Health Care</td><td><span class="example">crescenthomehealthcare</span></td></tr>
+          <tr><td>Calibright</td><td><span class="example">calibright</span></td></tr>
+          <tr><td>AC Solutions Group</td><td><span class="example">acsolutionsgroup</span></td></tr>
+          <tr><td>New Client Example</td><td><span class="example">newclientname</span> (lowercase, no spaces, no special chars)</td></tr>
+        </table>
+      </div>
+
+      <div class="step-card" data-step="Step B — Generate HTML Files">
+        <h4>Step 2 — Generate the HTML Pages (Ask Claude)</h4>
+        <p>Ask Claude in this project to generate the policy pages. Provide:</p>
+        <ul>
+          <li>Client legal business name</li>
+          <li>Client website URL</li>
+          <li>Client phone number</li>
+          <li>Client address</li>
+          <li>What SMS messages they'll send (for Terms description)</li>
+          <li>Whether they need an sms-optin page (Via Text opt-in only)</li>
+        </ul>
+        <div class="info-box" style="margin-top:12px;">
+          <span class="box-icon">💬</span>
+          <div class="box-content">
+            <strong>Example prompt to Claude:</strong><br/>
+            "Generate privacy policy and terms pages for [Client Name]. Website: [URL]. Phone: [number]. Address: [address]. They send appointment reminders and billing notifications. Also generate an sms-optin page — keyword APPT to [phone]."
+          </div>
+        </div>
+        <p style="margin-top:14px;">Claude will generate a downloadable ZIP. Extract it and copy the folders into <code style="font-family:monospace;background:#F3F4F6;padding:2px 6px;border-radius:4px;">~/Documents/policiesandterms/[clientslug]/</code></p>
+        <div class="warn-box" style="margin-top:10px;">
+          <span class="box-icon">⚠️</span>
+          <div class="box-content"><strong>Do NOT commit ZIP files or .DS_Store files.</strong> Only commit the HTML index files. If accidentally committed, remove them: <code style="font-family:monospace;font-size:12px;">rm [clientslug]/*.zip [clientslug]/.DS_Store</code> then git add + commit + push.</div>
+        </div>
+      </div>
+
+      <div class="step-card" data-step="Step C — Push to GitHub">
+        <h4>Step 3 — Push to GitHub</h4>
+        <p>This triggers Cloudflare Pages to auto-deploy. Pages go live in ~60 seconds.</p>
+        <div class="sample-msg" style="margin-top:12px;">
+          <span class="label">Terminal — Push to GitHub</span>
+cd ~/Documents/policiesandterms
+git add .
+git commit -m "Add [Client Name] policy pages"
+git push
+        </div>
+        <div class="tip-box" style="margin-top:12px;">
+          <span class="box-icon">🔑</span>
+          <div class="box-content">
+            <strong>Git authentication uses a Personal Access Token.</strong> If prompted for a password, use your GitHub Personal Access Token (not your GitHub password). Token is embedded in the remote URL — if it expires, regenerate at github.com → Settings → Developer Settings → Personal Access Tokens → Tokens (classic) → repo scope.
+          </div>
+        </div>
+        <p style="margin-top:12px;"><strong>Expected output when successful:</strong></p>
+        <div class="sample-msg" style="margin-top:8px;">
+          <span class="label">Success output</span>
+Writing objects: 100% (X/X), X KiB | X MiB/s, done.
+remote: Resolving deltas: 100% (X/X), done.
+To https://github.com/acsolutionsgrp/policiesandterms.git
+   abc123..def456  main -> main
+        </div>
+      </div>
+
+      <div class="step-card" data-step="Step D — Test URLs">
+        <h4>Step 4 — Test All URLs in Browser</h4>
+        <p>Wait 60 seconds after pushing, then test every URL before using them in Twilio:</p>
+        <div class="sample-msg" style="margin-top:12px;">
+          <span class="label">URLs to verify (replace [clientslug])</span>
+https://policiesandterms.com/[clientslug]/privacy-policy   ← Must load
+https://policiesandterms.com/[clientslug]/terms            ← Must load
+https://policiesandterms.com/[clientslug]/sms-optin        ← If Via Text
+        </div>
+        <div class="warn-box" style="margin-top:10px;">
+          <span class="box-icon">🚨</span>
+          <div class="box-content"><strong>Never enter a URL in Twilio that you haven't tested in a browser first.</strong> A 404 or error page = instant campaign rejection.</div>
+        </div>
+      </div>
+
+      <div class="step-card" data-step="Step E — Cloudflare Custom Domain (Optional)">
+        <h4>Step 5 — Add Cloudflare Custom Domain (Optional)</h4>
+        <p>Only needed if you want a branded subdomain like <code style="font-family:monospace;background:#F3F4F6;padding:2px 6px;border-radius:4px;">northparkmed.policiesandterms.com</code>. The subfolder URLs work for Twilio without this step.</p>
+        <div class="nav-path" style="margin:12px 0;">
+          <span class="node">dash.cloudflare.com</span>
+          <span class="arrow">→</span>
+          <span class="node">Workers &amp; Pages</span>
+          <span class="arrow">→</span>
+          <span class="node">policiesandterms</span>
+          <span class="arrow">→</span>
+          <span class="node">Custom Domains</span>
+          <span class="arrow">→</span>
+          <span class="node">Set up a custom domain</span>
+        </div>
+        <p>Enter: <code style="font-family:monospace;background:#F3F4F6;padding:2px 6px;border-radius:4px;">[clientslug].policiesandterms.com</code></p>
+        <p style="margin-top:8px;">Cloudflare will automatically add the DNS CNAME record since the domain is in the same account. Status will change from "Verification pending" to "Active" within a few minutes.</p>
+        <div class="info-box" style="margin-top:12px;">
+          <span class="box-icon">ℹ️</span>
+          <div class="box-content">
+            <strong>Wildcard DNS is already set up.</strong> A <code style="font-family:monospace;font-size:12px;">*.policiesandterms.com</code> CNAME pointing to <code style="font-family:monospace;font-size:12px;">policiesandterms.pages.dev</code> is already in Cloudflare DNS. However, Cloudflare Pages still requires each subdomain to be registered as a Custom Domain in the project settings — the DNS wildcard alone is not enough.
+          </div>
+        </div>
+      </div>
+
+      <div class="step-card" data-step="Quick Reference">
+        <h4>Complete New Client Command Sequence</h4>
+        <p>Run this entire sequence every time you onboard a new client. Replace all placeholders.</p>
+        <div class="sample-msg" style="margin-top:12px;">
+          <span class="label">Full terminal sequence — new client onboarding</span>
+# 1. Create folders
+cd ~/Documents/policiesandterms
+mkdir -p [slug]/privacy-policy [slug]/terms [slug]/sms-optin
+
+# 2. (Ask Claude to generate HTML files and place them in the folders)
+
+# 3. Push to GitHub
+git add .
+git commit -m "Add [Client Name] policy pages"
+git push
+
+# 4. Wait 60 seconds then test in browser
+open https://policiesandterms.com/[slug]/privacy-policy
+open https://policiesandterms.com/[slug]/terms
+open https://policiesandterms.com/[slug]/sms-optin
+
+# 5. Add Cloudflare custom domain (optional)
+# dash.cloudflare.com → Workers & Pages → policiesandterms
+# → Custom Domains → [slug].policiesandterms.com
+
+# 6. You are ready to fill in Twilio campaign form URLs
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- REJECTIONS -->
+  <div class="section" id="rejections">
+    <div class="section-header">
+      <div class="section-num" style="background:var(--red);">!</div>
+      <div>
+        <div class="section-title">Common Rejection Reasons & Fixes</div>
+        <div class="section-subtitle">Learn from real rejections — Crescent Home Health Care was rejected for CTA issues</div>
+      </div>
+    </div>
+
+    <table class="reject-table">
+      <tr>
+        <th>Rejection Reason</th>
+        <th>Root Cause</th>
+        <th>Fix</th>
+      </tr>
+      <tr>
+        <td>Issues verifying the Call to Action (CTA)</td>
+        <td>Consent description too vague — reviewer couldn't verify how customers actually opt in</td>
+        <td>Add the <strong>exact verbal script</strong> staff reads. For Via Text, add the hosted collateral URL. Be specific — don't say "verbally" without showing the exact words.</td>
+      </tr>
+      <tr>
+        <td>STOP/HELP missing from sample messages</td>
+        <td>Sample messages didn't include opt-out and help instructions</td>
+        <td>Add "Reply STOP to opt out, HELP for help" and "Msg &amp; data rates may apply" to <strong>every single</strong> sample message — no exceptions.</td>
+      </tr>
+      <tr>
+        <td>Policy URLs not resolving</td>
+        <td>Pages weren't deployed yet or had wrong URL</td>
+        <td>Always test both URLs in a browser before submitting. Push to GitHub and wait 60 seconds for Cloudflare Pages to deploy.</td>
+      </tr>
+      <tr>
+        <td>Error: undefined on submit</td>
+        <td>A required field is empty — usually consent description, message content checkboxes, or policy URLs</td>
+        <td>Scroll back to top. Verify Embedded Links and Phone Numbers are checked. Check that consent description has content and both policy URLs are filled.</td>
+      </tr>
+      <tr>
+        <td>Subaccount missing shared brand</td>
+        <td>Brand sharing ticket not submitted or not yet processed</td>
+        <td>Main account → Regulatory Compliance → Brands → Share Brand → Enable on all subaccounts → Submit support ticket. Wait for Twilio to confirm (few hours to 1 day).</td>
+      </tr>
+      <tr>
+        <td>Brand rejected — identity mismatch</td>
+        <td>EIN or website doesn't match TCR records for the business</td>
+        <td>Verify EIN with client. Ensure website is live and matches the business name. Government/financial sites may block Twilio's verification crawlers — use a different IP if needed.</td>
+      </tr>
+    </table>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- CHECKLIST -->
+  <div class="section" id="checklist">
+    <div class="section-header">
+      <div class="section-num green">✓</div>
+      <div>
+        <div class="section-title">Final Submission Checklist</div>
+        <div class="section-subtitle">Run through this before every campaign submission</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div>
+        <div class="phase" style="margin-bottom:14px;">
+          <div class="phase-badge">BEFORE</div>
+          <div><div class="phase-title">Pre-Submission</div></div>
+        </div>
+        <ul class="checklist">
+          <li>Client legal name, EIN, website, phone, address collected</li>
+          <li>Policy pages created in correct folder on Mac</li>
+          <li>git push successful</li>
+          <li><strong>Both policy URLs tested and loading in browser</strong></li>
+          <li>Correct Twilio subaccount selected</li>
+          <li>Brand Approved status confirmed</li>
+        </ul>
+      </div>
+      <div>
+        <div class="phase" style="margin-bottom:14px;">
+          <div class="phase-badge">BRAND</div>
+          <div><div class="phase-title">A2P Brand Form</div></div>
+        </div>
+        <ul class="checklist">
+          <li><strong>Low Volume Standard</strong> brand type selected</li>
+          <li>EIN entered correctly</li>
+          <li>Website URL is live and correct</li>
+          <li>Industry matches client's business</li>
+          <li>Submitted and confirmed Approved before proceeding</li>
+        </ul>
+      </div>
+      <div>
+        <div class="phase" style="margin-bottom:14px;">
+          <div class="phase-badge">CAMPAIGN</div>
+          <div><div class="phase-title">A2P Campaign Form</div></div>
+        </div>
+        <ul class="checklist">
+          <li><strong>Low Volume Mixed</strong> use case selected</li>
+          <li>Campaign description includes STOP/HELP/rates/frequency</li>
+          <li><strong>Every sample message has STOP, HELP, and rates</strong></li>
+          <li>Only correct opt-in methods checked</li>
+          <li>Consent field has exact verbal script and/or collateral URL</li>
+          <li>Embedded Links + Phone Numbers checked</li>
+          <li>Privacy Policy URL entered and tested</li>
+          <li>Terms URL entered and tested</li>
+          <li>Opt-out and Help fields left blank</li>
+        </ul>
+      </div>
+      <div>
+        <div class="phase" style="margin-bottom:14px;">
+          <div class="phase-badge">AFTER</div>
+          <div><div class="phase-title">Post-Submission</div></div>
+        </div>
+        <ul class="checklist">
+          <li>$15 vetting fee confirmed</li>
+          <li>Campaign status shows In Review / In Progress</li>
+          <li>Monitor email for approval or rejection</li>
+          <li>If rejected: read reason, fix specific issue, resubmit</li>
+          <li>If approved: add phone numbers to Messaging Service Sender Pool</li>
+          <li>Test by sending a message from the registered number</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- ACTIVE CLIENTS -->
+  <div class="section" id="clients">
+    <div class="section-header">
+      <div class="section-num blue">@</div>
+      <div>
+        <div class="section-title">Active Client Policy Pages</div>
+        <div class="section-subtitle">policiesandterms.com — GitHub: acsolutionsgrp/policiesandterms</div>
+      </div>
+    </div>
+
+    <table class="client-table">
+      <tr>
+        <th>Client</th>
+        <th>Slug</th>
+        <th>Privacy Policy URL</th>
+        <th>Terms URL</th>
+      </tr>
+      <tr>
+        <td>Crescent Home Health Care</td>
+        <td>crescenthomehealthcare</td>
+        <td>.../crescenthomehealthcare/privacy-policy</td>
+        <td>.../crescenthomehealthcare/terms</td>
+      </tr>
+      <tr>
+        <td>AC Solutions Group</td>
+        <td>acsolutionsgroup</td>
+        <td>.../acsolutionsgroup/privacy-policy</td>
+        <td>.../acsolutionsgroup/terms</td>
+      </tr>
+      <tr>
+        <td>Calibright</td>
+        <td>calibright</td>
+        <td>.../calibright/privacy-policy</td>
+        <td>.../calibright/terms</td>
+      </tr>
+      <tr>
+        <td>North Park Medical Group</td>
+        <td>northparkmed</td>
+        <td>.../northparkmed/privacy-policy</td>
+        <td>.../northparkmed/terms</td>
+      </tr>
+    </table>
+
+    <div class="info-box" style="margin-top:16px;">
+      <span class="box-icon">➕</span>
+      <div class="box-content">
+        <strong>Adding a new client:</strong>
+        mkdir -p ~/Documents/policiesandterms/[slug]/{privacy-policy,terms} → copy HTML template → find &amp; replace client name/info → git push → verify URLs → add custom domain in Cloudflare Pages (Workers &amp; Pages → policiesandterms → Custom Domains → [slug].policiesandterms.com)
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <strong>One I.T. Pro</strong> &nbsp;·&nbsp; antonio@oneitpro.com &nbsp;·&nbsp; (312) 313-5774 &nbsp;·&nbsp; oneitpro.com<br/>
+    <span style="margin-top:6px;display:block;">Internal Use Only — Version 1.0 — June 2026</span>
+  </div>
+
+</main>
+</div>
+
+</body>
+</html>
