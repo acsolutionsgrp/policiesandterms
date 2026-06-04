@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMS Opt-In | Crescent Home Health Care</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f0f4f8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      max-width: 540px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    }
+    .card-header {
+      background: #0e4d8a;
+      padding: 32px 40px;
+      text-align: center;
+    }
+    .card-header .practice {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem; color: white; margin-bottom: 8px;
+    }
+    .card-header .tagline {
+      font-size: 13px; color: rgba(255,255,255,0.6);
+    }
+    .card-body { padding: 36px 40px; }
+    .cta-box {
+      background: #0e4d8a;
+      border-radius: 12px;
+      padding: 28px 32px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .cta-box .instruction {
+      font-size: 13px; color: rgba(255,255,255,0.7);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .cta-box .keyword {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.2rem; color: white;
+      margin-bottom: 8px;
+    }
+    .cta-box .to-label {
+      font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 4px;
+    }
+    .cta-box .phone {
+      font-size: 1.5rem; font-weight: 600; color: #7dd3fc;
+      letter-spacing: 0.04em;
+    }
+    .flow-section { margin-bottom: 24px; }
+    .flow-section h3 {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #9ca3af;
+      margin-bottom: 14px;
+    }
+    .flow-step {
+      display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start;
+    }
+    .bubble {
+      border-radius: 12px; padding: 10px 14px;
+      font-size: 13px; line-height: 1.5; flex: 1;
+    }
+    .bubble.customer {
+      background: #f3f4f6; color: #374151;
+      border-bottom-left-radius: 2px;
+    }
+    .bubble.business {
+      background: #0e4d8a; color: white;
+      border-bottom-right-radius: 2px;
+    }
+    .bubble-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: #9ca3af;
+      margin-bottom: 4px; padding: 0 2px;
+    }
+    .disclosures {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 24px;
+    }
+    .disclosures h3 {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #9ca3af; margin-bottom: 12px;
+    }
+    .disclosure-item {
+      font-size: 12px; color: #6b7280; line-height: 1.6;
+      margin-bottom: 6px; padding-left: 14px; position: relative;
+    }
+    .disclosure-item::before {
+      content: '·'; position: absolute; left: 0; color: #0e4d8a; font-weight: 700;
+    }
+    .disclosure-item a { color: #1a56db; text-decoration: none; }
+    .footer {
+      text-align: center; padding: 20px 40px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 11px; color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <div class="card-header">
+    <div class="practice">Crescent Home Health Care</div>
+    <div class="tagline">crescenthomehealthcare.com</div>
+  </div>
+  <div class="card-body">
+
+    <div class="cta-box">
+      <div class="instruction">Text to opt in to care updates &amp; reminders</div>
+      <div class="keyword">CRESCENT</div>
+      <div class="to-label">to</div>
+      <div class="phone">crescenthomehealthcare.com</div>
+    </div>
+
+    <div class="flow-section">
+      <h3>How it works</h3>
+
+      <div class="flow-step">
+        <div>
+          <div class="bubble-label">Client texts</div>
+          <div class="bubble customer">CRESCENT</div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div style="flex:1">
+          <div class="bubble-label">Crescent Home Health Care responds</div>
+          <div class="bubble business">
+            Crescent Home Health Care: Thanks for texting us! You'll receive care coordination updates &amp; appointment reminders. Msg frequency varies. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out. Terms: policiesandterms.com/crescenthomehealthcare/terms Privacy: policiesandterms.com/crescenthomehealthcare/privacy-policy — Reply Y to confirm.
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div>
+          <div class="bubble-label">Client confirms</div>
+          <div class="bubble customer">Y</div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div style="flex:1">
+          <div class="bubble-label">Crescent confirms enrollment</div>
+          <div class="bubble business">
+            Crescent Home Health Care: You're all set! You'll now receive care coordination updates and appointment reminders from our team. Reply STOP at any time to opt out.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclosures">
+      <h3>Program Disclosures</h3>
+      <div class="disclosure-item">Message frequency varies based on your care schedule</div>
+      <div class="disclosure-item">Message and data rates may apply</div>
+      <div class="disclosure-item">Reply <strong>STOP</strong> to opt out at any time</div>
+      <div class="disclosure-item">Reply <strong>HELP</strong> for assistance</div>
+      <div class="disclosure-item">Terms: <a href="https://policiesandterms.com/crescenthomehealthcare/terms">policiesandterms.com/crescenthomehealthcare/terms</a></div>
+      <div class="disclosure-item">Privacy Policy: <a href="https://policiesandterms.com/crescenthomehealthcare/privacy-policy">policiesandterms.com/crescenthomehealthcare/privacy-policy</a></div>
+      <div class="disclosure-item">Consent is not a condition of receiving home health care services</div>
+    </div>
+
+  </div>
+  <div class="footer">
+    Crescent Home Health Care &nbsp;·&nbsp; crescenthomehealthcare.com
+  </div>
+</div>
+</body>
+</html>
