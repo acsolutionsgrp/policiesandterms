@@ -15,11 +15,12 @@
       align-items: center;
       justify-content: center;
       padding: 40px 20px;
+      line-height: 1.7;
     }
     .card {
       background: white;
       border-radius: 16px;
-      max-width: 540px;
+      max-width: 600px;
       width: 100%;
       overflow: hidden;
       box-shadow: 0 8px 40px rgba(0,0,0,0.12);
@@ -31,7 +32,7 @@
     }
     .card-header .practice {
       font-family: 'DM Serif Display', serif;
-      font-size: 1.4rem; color: white; margin-bottom: 8px;
+      font-size: 1.4rem; color: white; margin-bottom: 6px;
     }
     .card-header .tagline {
       font-size: 13px; color: rgba(255,255,255,0.6);
@@ -40,67 +41,65 @@
     .cta-box {
       background: #263445;
       border-radius: 12px;
-      padding: 28px 32px;
-      text-align: center;
-      margin-bottom: 28px;
+      padding: 26px 30px;
+      margin-bottom: 30px;
     }
     .cta-box .instruction {
-      font-size: 13px; color: rgba(255,255,255,0.7);
-      text-transform: uppercase; letter-spacing: 0.08em;
-      margin-bottom: 12px;
+      font-size: 11px; color: rgba(255,255,255,0.65);
+      text-transform: uppercase; letter-spacing: 0.09em;
+      margin-bottom: 12px; text-align: center;
     }
-    .cta-box .keyword {
+    .cta-box .headline {
       font-family: 'DM Serif Display', serif;
-      font-size: 2.2rem; color: white;
-      margin-bottom: 8px;
+      font-size: 1.35rem; color: white; text-align: center;
+      line-height: 1.4;
     }
-    .cta-box .to-label {
-      font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 4px;
+    .cta-box .sub {
+      font-size: 13px; color: rgba(255,255,255,0.7);
+      text-align: center; margin-top: 10px;
     }
-    .cta-box .phone {
-      font-size: 1.5rem; font-weight: 600; color: #7dd3fc;
-      letter-spacing: 0.04em;
-    }
-    .flow-section { margin-bottom: 24px; }
+    .flow-section { margin-bottom: 28px; }
     .flow-section h3 {
       font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
       text-transform: uppercase; color: #9ca3af;
       margin-bottom: 14px;
     }
-    .flow-step {
-      display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start;
+    .step {
+      display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start;
     }
-    .flow-step .bubble {
-      border-radius: 12px; padding: 10px 14px;
-      font-size: 13px; line-height: 1.5; flex: 1;
-    }
-    .bubble.patient {
-      background: #f3f4f6; color: #374151;
-      border-bottom-left-radius: 2px;
-    }
-    .bubble.practice {
+    .step .n {
+      flex: 0 0 26px; height: 26px; border-radius: 50%;
       background: #263445; color: white;
-      border-bottom-right-radius: 2px;
+      font-size: 12px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 3px;
     }
-    .bubble-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.06em;
-      text-transform: uppercase; color: #9ca3af;
-      margin-bottom: 4px; padding: 0 2px;
+    .step .c { flex: 1; font-size: 14px; color: #374151; }
+    .script {
+      background: #f8fafc; border-left: 4px solid #263445;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px; margin-top: 8px;
+      font-size: 14px; color: #263445; font-style: italic;
+    }
+    .bubble {
+      background: #263445; color: white;
+      border-radius: 12px; border-bottom-right-radius: 2px;
+      padding: 12px 16px; margin-top: 8px;
+      font-size: 13px; line-height: 1.55;
     }
     .disclosures {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 10px;
       padding: 20px 24px;
-      margin-top: 24px;
     }
     .disclosures h3 {
       font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
       text-transform: uppercase; color: #9ca3af; margin-bottom: 12px;
     }
     .disclosure-item {
-      font-size: 12px; color: #6b7280; line-height: 1.6;
-      margin-bottom: 6px; padding-left: 14px; position: relative;
+      font-size: 13px; color: #6b7280; line-height: 1.65;
+      margin-bottom: 7px; padding-left: 15px; position: relative;
     }
     .disclosure-item::before {
       content: '·'; position: absolute; left: 0; color: #263445; font-weight: 700;
@@ -111,82 +110,66 @@
       border-top: 1px solid #e2e8f0;
       font-size: 11px; color: #9ca3af;
     }
+    @media (max-width: 600px) {
+      .card-header, .card-body { padding-left: 22px; padding-right: 22px; }
+    }
   </style>
 </head>
 <body>
 <div class="card">
   <div class="card-header">
     <div class="practice">Osorio Metals Supply</div>
-    <div class="tagline">4518 W Haddon Ave, Chicago, IL 60651</div>
+    <div class="tagline">Osorio Iron Works Inc &nbsp;·&nbsp; 4518 W Haddon Ave, Chicago, IL 60651</div>
   </div>
   <div class="card-body">
 
     <div class="cta-box">
-      <div class="instruction">Text to opt in to quotes &amp; order updates</div>
-      <div class="keyword">QUOTE</div>
-      <div class="to-label">to</div>
-      <div class="phone">+1 (708) 808-4428</div>
+      <div class="instruction">How customers opt in</div>
+      <div class="headline">Verbal consent, given in person at our counter or by phone</div>
+      <div class="sub">There is no web form, paper form, QR code, or text keyword opt-in for this program.</div>
     </div>
 
     <div class="flow-section">
-      <h3>Via text (keyword) opt-in</h3>
+      <h3>Opt-in workflow</h3>
 
-      <div class="flow-step">
-        <div>
-          <div class="bubble-label">Customer texts</div>
-          <div class="bubble patient">QUOTE</div>
-        </div>
+      <div class="step">
+        <div class="n">1</div>
+        <div class="c">A customer calls (773) 772-4060 or visits our counter at 4518 W Haddon Ave, Chicago, IL 60651 to request a price quote on metal products.</div>
       </div>
 
-      <div class="flow-step">
-        <div style="flex:1">
-          <div class="bubble-label">Osorio Metals responds</div>
-          <div class="bubble practice">
-            Osorio Metals Supply: Thanks for texting us! You'll receive quotes &amp; order updates. Msg frequency varies. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out. Terms: policiesandterms.com/osoriometals/terms Privacy: policiesandterms.com/osoriometals/privacy-policy — Reply Y to confirm.
+      <div class="step">
+        <div class="n">2</div>
+        <div class="c">
+          After taking the quote request, our staff member asks the customer, verbatim:
+          <div class="script">
+            "Would you like us to text you your quote and order updates? You will only receive messages about your quotes, orders, and deliveries. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out at any time. Our Terms are at policiesandterms.com/osoriometals/terms/ and our Privacy Policy is at policiesandterms.com/osoriometals/privacy-policy/. Do I have your permission to text you at this mobile number?"
           </div>
         </div>
       </div>
 
-      <div class="flow-step">
-        <div>
-          <div class="bubble-label">Customer confirms</div>
-          <div class="bubble patient">Y</div>
+      <div class="step">
+        <div class="n">3</div>
+        <div class="c">The customer must verbally answer yes. Consent is not a condition of purchase. Customers who decline still receive their quote by email, by fax, or in person at our counter.</div>
+      </div>
+
+      <div class="step">
+        <div class="n">4</div>
+        <div class="c">The staff member records the customer name, mobile number, date, and staff initials against the customer account in our system.</div>
+      </div>
+
+      <div class="step">
+        <div class="n">5</div>
+        <div class="c">
+          We then send a one-time confirmation text:
+          <div class="bubble">
+            Osorio Metals Supply: You're all set. You'll now receive quotes and order updates from our team. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out.
+          </div>
         </div>
       </div>
 
-      <div class="flow-step">
-        <div style="flex:1">
-          <div class="bubble-label">Osorio Metals confirms enrollment</div>
-          <div class="bubble practice">
-            Osorio Metals Supply: You're all set! You'll now receive quotes and order updates from our team. Reply STOP at any time to opt out.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="flow-section">
-      <h3>Verbal consent script</h3>
-      <div class="flow-step">
-        <div style="flex:1">
-          <div class="bubble-label">Staff ask at the counter or by phone</div>
-          <div class="bubble patient">
-            "Would you like us to text you your quote and order updates? You would receive messages only about your quotes, orders, and deliveries. Message frequency varies. Msg &amp; data rates may apply. Reply HELP for help or STOP to opt out. Our Terms are at policiesandterms.com/osoriometals/terms and our Privacy Policy at policiesandterms.com/osoriometals/privacy-policy. Do I have your permission to text you at this number?"
-          </div>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div style="flex:1">
-          <div class="bubble-label">Customer confirms verbally</div>
-          <div class="bubble patient">"Yes"</div>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div style="flex:1">
-          <div class="bubble-label">Staff log the consent, then send a confirmation text</div>
-          <div class="bubble practice">
-            Osorio Metals Supply: You're all set! You'll now receive quotes and order updates from our team. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out.
-          </div>
-        </div>
+      <div class="step">
+        <div class="n">6</div>
+        <div class="c">Quotes are delivered as a text message containing a link to a page on quotes.osoriometals.com, a domain owned and operated by Osorio Iron Works Inc. We do not use public URL shorteners.</div>
       </div>
     </div>
 
@@ -196,10 +179,11 @@
       <div class="disclosure-item">Message and data rates may apply</div>
       <div class="disclosure-item">Reply <strong>STOP</strong> to opt out at any time</div>
       <div class="disclosure-item">Reply <strong>HELP</strong> for assistance</div>
-      <div class="disclosure-item">Terms: <a href="https://policiesandterms.com/osoriometals/terms">policiesandterms.com/osoriometals/terms</a></div>
-      <div class="disclosure-item">Privacy Policy: <a href="https://policiesandterms.com/osoriometals/privacy-policy">policiesandterms.com/osoriometals/privacy-policy</a></div>
-      <div class="disclosure-item">Quotes are delivered as a link to quotes.osoriometals.com, not as a file attachment</div>
+      <div class="disclosure-item">Terms: <a href="https://policiesandterms.com/osoriometals/terms/">policiesandterms.com/osoriometals/terms/</a></div>
+      <div class="disclosure-item">Privacy Policy: <a href="https://policiesandterms.com/osoriometals/privacy-policy/">policiesandterms.com/osoriometals/privacy-policy/</a></div>
+      <div class="disclosure-item">Quotes are delivered as a link, not as a file attachment</div>
       <div class="disclosure-item">Consent is not a condition of purchase</div>
+      <div class="disclosure-item">We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes</div>
     </div>
 
   </div>
